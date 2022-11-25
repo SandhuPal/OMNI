@@ -1,0 +1,18 @@
+
+
+<div class="time-control">
+    Set Time: 
+    <input class="time-set" type="time" id="appt" name="appt" step=1 value=""> 
+    <button class="sync-btn" (click)="Sync()" id=sync>Sync Clocks</button>
+</div>
+<div class="clock">
+  <div class="analog-clock">
+    <div class="hour hand" [ngStyle]="hourHandStyle"></div>
+    <div class="minute hand" [ngStyle]="minuteHandStyle"></div>
+    <div class="second hand" [ngStyle]="secondHandStyle"></div>
+    <div class="center-circle"></div>
+  </div>
+  <div class="digital-clock">{{format(hour)}}:{{format(minute)}}:{{format(second)}}</div>
+ 
+</div>
+ 
